@@ -23,7 +23,7 @@ Unregister-ScheduledTask -TaskName "Automatically Shutdown on Idle" -Confirm:$fa
 }
 catch {}
 
-$action = New-ScheduledTaskAction -Execute 'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe' -Argument '-executionpolicy bypass -windowstyle hidden -file %programdata%\ParsecLoader\automatic-shutdown.ps1'
+$action = New-ScheduledTaskAction -Execute 'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe' -Argument '-executionpolicy bypass -windowstyle hidden -file %programdata%\CloudGaming\automatic-shutdown.ps1'
 
 $trigger =  New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME 
 
